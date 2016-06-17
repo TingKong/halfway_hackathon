@@ -3,7 +3,7 @@
     
 <head>
   <title>Hackathon</title>
-    
+<link rel="stylesheet" type="text/css" href="main.css">
    <style>
       .bold{
         font-weight:bold;
@@ -13,33 +13,94 @@
         font-style: italic;
       }
    </style> 
+
 </head>
 <body>
 <header>
-  <h1>Hello World</h1>
+  <h1>Welcome</h1>
 </header>
 
-  <p><span class="bold">Live</span> live in the <span class="italic">moment</span></p>
+  <div id="age"></div>
+
+  <p><span class="bold">Live</span> live in the <br/> <span class="italic">moment</span></p>
+
+  <button>Click me to change the text above</button>
+
+  <form id="favorite">
+  <div>
+        <label for="food">Favorite Food:</label>
+        <input type="text" id="food" name="food" />
+    </div>
+    <div>
+        <label for="book">Favorite Book:</label>
+        <input type="text" id="book" name="book" />
+    </div>
+
+    <div>
+        <label for="vacation">Favorite Vacation Spot:</label>
+        <input type="text" id="spot" name="vacation" />
+    </div>
+
+    <input class="form1submit" type="submit" value="Submit">
+</form>
 
   <div class="awesomelist">
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>Doctors</li>
+        <li>Nurses</li>
+        <li>Patients</li>
       </ul>
-
+      <hr>
       <ol>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>Cook Dinner</li>
+        <li>Plate</li>
+        <li>Eat</li>
       </ol>
   </div>
+
+  <img src="image1.jpg">
 
     <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
   <script>
 $( document ).ready(function() {
-   
+  alert("Welcome to the page!");
     });  
+
+    var visitor = prompt("Please enter your name");
+    var age = prompt("how old are you");
+    var visitorcaps = visitor.toUpperCase();
+
+    $( "h1" ).append( " " + visitorcaps );
+    $("#age").append(visitorcaps + " " + "you are this" + " " + age);
+
+    document.querySelector('button').addEventListener('click', function() {
+        document.querySelector('p').style.color='#800006';
+    });
+
+
+
+//form
+
+
+
+
+
+var food =  document.querySelector('#food');
+    
+document.getElementById('#food').onkeydown = function(e){
+
+
+  if(e.keyCode == 13){
+      e.preventDefault();
+      document.querySelector('awesomelist ul li:first-child').text(food);
+  }
+  
+
+};
+
+
+
+
 
   </script>
     
