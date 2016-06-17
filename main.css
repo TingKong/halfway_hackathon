@@ -1,0 +1,23 @@
+body{
+
+    background:url(bg.jpg);
+    color:#0093d8;
+}
+
+img{
+
+    width:50%;
+}
+
+h1{
+    -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+background:#000080;
+padding:10px 20px;
+color:#fff;
+
+}
+
+
+
