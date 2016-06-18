@@ -41,12 +41,12 @@
         <input type="text" id="spot" name="vacation" />
     </div>
 
-    <input class="form1submit" type="submit" value="Submit">
+    <button id="form1submit"> submit </button>
 </form>
 
-  <div class="awesomelist">
+  
       <ul>
-        <li>Doctors</li>
+        <li class="fooditem">Doctors</li>
         <li>Nurses</li>
         <li>Patients</li>
       </ul>
@@ -56,7 +56,7 @@
         <li>Plate</li>
         <li>Eat</li>
       </ol>
-  </div>
+ 
 
   <img src="image1.jpg">
 
@@ -80,26 +80,25 @@ $( document ).ready(function() {
 
 
 //form
-
-
-
-
-
-var food =  document.querySelector('#food');
     
-document.getElementById('#food').onkeydown = function(e){
+function getFavFood(e) {
+e.preventDefault();
 
-
-  if(e.keyCode == 13){
+/*  if(e.keyCode == 13){
       e.preventDefault();
       document.querySelector('awesomelist ul li:first-child').text(food);
   }
-  
+  */
+  var food =  document.getElementById('food').value;
+ var result = document.getElementsByClassName('fooditem');
+  result.text ("Hello world!");
+ 
 
 };
 
 
-
+ var subButton = document.getElementById('form1submit');
+subButton.addEventListener('click', getFavFood, false);
 
 
   </script>
